@@ -1,45 +1,45 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class ContatosTest < ApplicationSystemTestCase
   setup do
     @contato = contatos(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit contatos_url
-    assert_selector "h1", text: "Contatos"
+    assert_selector 'h1', text: 'Contatos'
   end
 
-  test "should create contato" do
+  test 'should create contato' do
     visit contatos_url
-    click_on "New contato"
+    click_on 'New contato'
 
-    fill_in "Apelido", with: @contato.apelido
-    fill_in "Nome", with: @contato.nome
-    fill_in "Telefone", with: @contato.telefone
-    click_on "Create Contato"
+    fill_in 'Apelido', with: @contato.apelido
+    fill_in 'Nome', with: @contato.nome
+    fill_in 'Telefone', with: @contato.telefone
+    click_on 'Create Contato'
 
-    assert_text "Contato was successfully created"
-    click_on "Back"
+    assert_text 'Contato was successfully created'
+    click_on 'Back'
   end
 
-  test "should update Contato" do
+  test 'should update Contato' do
     visit contato_url(@contato)
-    click_on "Edit this contato", match: :first
+    click_on 'Edit this contato', match: :first
 
-    fill_in "Apelido", with: @contato.apelido
-    fill_in "Nome", with: @contato.nome
-    fill_in "Telefone", with: @contato.telefone
-    click_on "Update Contato"
+    fill_in 'Apelido', with: @contato.apelido
+    fill_in 'Nome', with: @contato.nome
+    fill_in 'Telefone', with: @contato.telefone
+    click_on 'Update Contato'
 
-    assert_text "Contato was successfully updated"
-    click_on "Back"
+    assert_text 'Contato was successfully updated'
+    click_on 'Back'
   end
 
-  test "should destroy Contato" do
+  test 'should destroy Contato' do
     visit contato_url(@contato)
-    click_on "Destroy this contato", match: :first
+    click_on 'Destroy this contato', match: :first
 
-    assert_text "Contato was successfully destroyed"
+    assert_text 'Contato was successfully destroyed'
   end
 end

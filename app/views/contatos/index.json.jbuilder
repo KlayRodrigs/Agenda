@@ -1,1 +1,1 @@
-json.array! @contatos, partial: "contatos/contato", as: :contato
+json.array! @contatos, partial: 'contatos/contato', as: :contato
